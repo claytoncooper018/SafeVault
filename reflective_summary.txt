@@ -1,0 +1,13 @@
+Vulnerabilities identified:
+- Input that could allow stored XSS via unvalidated fields.
+- Plain-text password storage in demo (not production-ready).
+- Missing role restrictions on some endpoints (fixed).
+
+Fixes applied:
+- DTO validation checks to reject suspicious input and require fields.
+- Added JWT-based authentication and role-based authorization for admin endpoints.
+- Security headers middleware to reduce XSS/clickjacking risk.
+- Tests that validate authentication and DTO validation behaviors.
+
+Copilot assistance:
+- Copilot helped scaffold DTO validation and middleware patterns, suggested default tests, and provided JWT authentication examples which were adapted for this educational demo.
